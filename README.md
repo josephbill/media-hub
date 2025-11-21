@@ -36,9 +36,19 @@ Authorization = access priviledges - role based authorization , token based auth
 custompasswordresetview , custompasswordresetconfirmview - views.py
 4. Register the views actions as URL route - urls.py 
 5. Register the models for admin to use and manage content on - admin.py
-    
+6. Register the apps url to the projects urls = project/urls.py
+7. Create the templates 
+   - create a templates folder - within the app 
+   - create a global templates folder - register it's configuration in the settings.py file 
+8. Make databases migrations and then populate the templates 
+   python manage.py makemigrations 
+   python manage.py migrate
 
-
+### Template creation
+1. Configuration level file : base.html 
+   - Defining your blocks : title , extra_css , content (most important) , footer, extra_js
+   - Linking to global stylesheet / style lib. (bootstrap)
+   - Link to global js files 
 
 
 
