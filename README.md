@@ -50,6 +50,21 @@ custompasswordresetview , custompasswordresetconfirmview - views.py
    - Linking to global stylesheet / style lib. (bootstrap)
    - Link to global js files 
 
+2. Create the other pages by simplying extending (extends) the configs done on 1.
+   Populate what is dynamic using block.  
+
+## MVT - Model Views Templates
+
+### Media Asset app views 
+'''
+1. Dashboard view : this allows my user to see uploaded items set as public 
+2. My media view : this allows users to see only their uploads 
+3. Upload media view : this allows user to upload media 
+4. Edit media view : this allows user to edit uploaded media 
+5. Delete media view : this allows user to delete their uploaded media 
+6. Media Detail view : this allows users to see all details for a media item 
+'''
+
 
 
 
