@@ -76,9 +76,34 @@ def media_detail_view(request,pk):
 ### edit and delete views 
 @login_required
 def edit_media_view(request,pk):
-    pass
+    '''edit media assets based off pk'''
+    media = get_object_or_404(MediaAsset, pk=pk)
+    if not media.can_edit(request.user):
+        messages.error(request, "You cannot edit this file.")
+        return redirect('media_assets:dashboard')
+    if request.method  == "POST":
+        form = MediaAssetForm(request.POST, request.FILES, instance=media)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Media Asset Updated Successfully")
+            return redirect("media_assets:media_detail", pk=pk)
+    else:
+        form = MediaAssetForm(instance=media)
 
 
 @login_required
 def delete_media_view(request,pk):
-    pass
+    '''Delete media assets based of pk'''
+    media = get_object_or_404(MediaAsset,pk=pk)
+    if not media.can_delete(request.user):
+        messages.error(request, "You cannot delete this media")
+        return redirect("media_assets:dashboard")
+    
+    if request.method == "POST":
+        media.delete()
+        messages.success(request,"Deleted Successfully")
+        return redirect("media_assets:my_media")
+    
+    return render(request, 'media_assets/delete_media.html', {
+        'media': media
+    })
