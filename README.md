@@ -65,6 +65,11 @@ custompasswordresetview , custompasswordresetconfirmview - views.py
 6. Media Detail view : this allows users to see all details for a media item 
 '''
 
+### Configuring our environmental variables 
+1. Create a .env file for development purposes  -  store your info as variable references 
+2. Create a .gitignore file for github push purposes - include .env as one of the ignored files 
+ This abstracts sensitive info from the main application code 
+
 
 
 
