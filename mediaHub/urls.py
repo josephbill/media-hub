@@ -25,6 +25,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/" , include('accounts.urls')),
     path("", include('media_assets.urls')),
+    path("", include('mediampesa.urls')),
 ]
 
 ## special url path for loading our assets on development 

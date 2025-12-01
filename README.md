@@ -71,12 +71,17 @@ custompasswordresetview , custompasswordresetconfirmview - views.py
  This abstracts sensitive info from the main application code 
 
 
+### MPESA INTEGRATION 
+1. Created a separate app that will contain our mpesa integration procedures 
+2. Create a model , transactions model - this will update made on our app 
+3. Settings.py project - configure the needed environmental credentials 
+4. Populate views and urls to map to the views and the respective templates 
 
 
-
-
-
-
+### MPESA + MEDIAHUB app connection 
+- Media Details screen my user will see a donate to me button 
+- Donate to me -> redirected to the payment screen 
+- Pay -> utilize the views function for proper redirect 
 
 
 
