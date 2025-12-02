@@ -84,9 +84,24 @@ custompasswordresetview , custompasswordresetconfirmview - views.py
 - Pay -> utilize the views function for proper redirect 
 
 
+### Changes/ Updates 
+1. Settings.py  - allowed hosts and csrf_domains 
+2. Urls.py/ project - adding the namespace for the mpesa app 
+3. Templates 
+   - media_assets  - media_detail.html  - added a button to mimic a checkout 
+   - mediampesa - index.html and waiting.html 
+4. Mediampesa app 
+   - urls.py 
+   - views.py - namespace addition to routes 
+5. On daraja mpesa console add lipa na mpesa express as a product to your app
+6. Populate the .env variables needed check .env.example file 
+7. NGROK service for development purposes over a https network : https://.......................
 
 
-
+## to use NGROK 
+1. launch your development server 
+2. open a new terminal / command prompt 
+3. ngrok http <server:port>
 
 
 

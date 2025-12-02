@@ -25,8 +25,16 @@ SECRET_KEY = "django-insecure-=+dp8qhgcqthd0m#_#rpkzhma*v2kzy%pcy1*lkw8o$1e#d*b0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# domains allowed to share mediaHub resources / processes :: CORS 
+ALLOWED_HOSTS = [
+    "localhost",
+    "127.0.0.1",
+    "9875a57c7fd5.ngrok-free.app", 
+]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.ngrok-free.app",
+]
 
 # Application definition
 
