@@ -102,6 +102,7 @@ custompasswordresetview , custompasswordresetconfirmview - views.py
 1. launch your development server 
 2. open a new terminal / command prompt 
 3. ngrok http <server:port>
+4. add as allowed host on app
 
 
 
