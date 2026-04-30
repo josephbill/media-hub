@@ -27,8 +27,8 @@
 </div>
 <script>
 const transactionId = "{{ transaction_id }}";
-const BASE_URL = "https://9875a57c7fd5.ngrok-free.app/";
-
+const BASE_URL = "https://0b8b-197-248-224-217.ngrok-free.app/";
+// check why response here is not capturing success changes 
 let checkStatusInterval = setInterval(function () {
   console.log("Checking transaction status...");
   fetch(`${BASE_URL}mediampesa/check-status/${transactionId}/`)
